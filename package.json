@@ -16,5 +16,8 @@
     "Service"
   ],
   "author": "Charel Samuel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
