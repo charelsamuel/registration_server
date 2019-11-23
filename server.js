@@ -6,6 +6,9 @@ const app = express();
 /* Use body parser to parse req body and json */
 app.use(bodyParser.urlencoded({ extended: true }));
 
+/* Sequelize ORM */
+const sequelize = require('./configs/sequelize');
+
 /* Importing the routes */
 const errorRouter = require('./routes/error');
 const accountRouter = require('./routes/apis/v1/account');
@@ -24,4 +27,7 @@ app.use('/', (req, res) => {
 /* Application Port */
 app.listen(3000, () => {
     console.log('Server started...');
+    sequelize.authenticate().then(() => {
+        console.log('Database connected..');
+    });
 });

@@ -18,8 +18,14 @@ module.exports = {
             mobileNumber: Sequelize.STRING,
             firstName: Sequelize.STRING,
             lastName: Sequelize.STRING,
-            birthDate: Sequelize.DATEONLY,
-            gender: Sequelize.STRING,
+            birthDate: {
+              type: Sequelize.DATEONLY,
+              defaultValue: null
+            },
+            gender: {
+              type: Sequelize.STRING,
+              defaultValue: null
+            },
             email: Sequelize.STRING,
             createdAt: Sequelize.DATE,
             updatedAt: Sequelize.DATE
