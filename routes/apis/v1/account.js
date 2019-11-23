@@ -3,6 +3,8 @@ const cors = require('cors');
 
 const router = express.Router();
 
+const accountValidation = require('../../../validations/account');
+
 router.get('/test', cors(), (req, res) => {
     let data = {value: "test"};
 
@@ -10,9 +12,17 @@ router.get('/test', cors(), (req, res) => {
 });
 
 router.post('/register', cors(), (req, res) => {
-    let data = req.body;
-    
-    res.json(data);
+    let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+
+    let errors = accountValidation.getErrors(firstName, lastName);
+
+    if (errors.hasError) {
+        res.status(400);
+        res.json(errors);
+    }
+
+    res.json(firstName);
 });
 
 module.exports = router;
