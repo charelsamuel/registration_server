@@ -10,4 +10,3 @@ router.get('/test', cors(), (req, res) => {
 });
 
 module.exports = router;
-
