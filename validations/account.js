@@ -1,5 +1,7 @@
 const validator = require("validator");
 
+const Account = require('../models/account');
+
 /*
 Get the errors of account attributes
 @params: string firstName,
@@ -134,10 +136,11 @@ module.exports.validateEmail = email => {
         message: ""
     };
 
-    /* Mobile Number required validation */
+    /* Email required validation */
     if (validator.isEmpty(email)) {
         result.isError = true;
         result.message = "Email is required!";
     }
+    
     return result;
 };

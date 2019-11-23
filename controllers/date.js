@@ -13,18 +13,18 @@ module.exports.getDays = (req, res) => {
 module.exports.getMonths = (req, res) => {
     let months = [];
 
-    months.push({ id: 1, name: "January" });
-    months.push({ id: 2, name: "February" });
-    months.push({ id: 3, name: "March" });
-    months.push({ id: 4, name: "April" });
-    months.push({ id: 5, name: "May" });
-    months.push({ id: 6, name: "June" });
-    months.push({ id: 7, name: "July" });
-    months.push({ id: 8, name: "August" });
-    months.push({ id: 9, name: "September" });
-    months.push({ id: 10, name: "October" });
-    months.push({ id: 11, name: "November" });
-    months.push({ id: 12, name: "December" });
+    months.push({ id: "01", name: "January" });
+    months.push({ id: "02", name: "February" });
+    months.push({ id: "03", name: "March" });
+    months.push({ id: "04", name: "April" });
+    months.push({ id: "05", name: "May" });
+    months.push({ id: "06", name: "June" });
+    months.push({ id: "07", name: "July" });
+    months.push({ id: "08", name: "August" });
+    months.push({ id: "09", name: "September" });
+    months.push({ id: "10", name: "October" });
+    months.push({ id: "11", name: "November" });
+    months.push({ id: "12", name: "December" });
 
     res.json(months);
 }

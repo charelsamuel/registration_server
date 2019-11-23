@@ -15,7 +15,10 @@ module.exports = {
                 primaryKey: true,
                 autoIncrement: true
             },
-            mobileNumber: Sequelize.STRING,
+            mobileNumber: {
+              type: Sequelize.STRING,
+              unique: true
+            },
             firstName: Sequelize.STRING,
             lastName: Sequelize.STRING,
             birthDate: {
@@ -26,7 +29,10 @@ module.exports = {
               type: Sequelize.STRING,
               defaultValue: null
             },
-            email: Sequelize.STRING,
+            email: {
+              type: Sequelize.STRING,
+              unique: true
+            },
             createdAt: Sequelize.DATE,
             updatedAt: Sequelize.DATE
         });
