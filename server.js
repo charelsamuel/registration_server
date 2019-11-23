@@ -4,10 +4,10 @@ const app = express();
 
 /* Importing the routes */
 const errorRouter = require('./routes/error');
-const accountRouter = require('./routes/account');
+const accountRouter = require('./routes/apis/v1/account');
 
 /* Using the routes */
-app.use('/account', accountRouter);
+app.use('/api/v1/account', accountRouter);
 app.use(errorRouter);
 
 /* Index page */
