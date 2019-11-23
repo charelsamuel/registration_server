@@ -1,6 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+/* Use body parser to parse req body and json */
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Importing the routes */
 const errorRouter = require('./routes/error');

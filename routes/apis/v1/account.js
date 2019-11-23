@@ -9,4 +9,10 @@ router.get('/test', cors(), (req, res) => {
     res.json(data);
 });
 
+router.post('/register', cors(), (req, res) => {
+    let data = req.body;
+    
+    res.json(data);
+});
+
 module.exports = router;
