@@ -9,9 +9,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Importing the routes */
 const errorRouter = require('./routes/error');
 const accountRouter = require('./routes/apis/v1/account');
+const dateRouter = require('./routes/apis/v1/date');
 
 /* Using the routes */
 app.use('/api/v1/account', accountRouter);
+app.use('/api/v1/date', dateRouter);
 app.use(errorRouter);
 
 /* Index page */
