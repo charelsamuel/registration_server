@@ -107,6 +107,12 @@ module.exports.validateMobileNumber = mobileNumber => {
         message: ""
     };
 
+    /* Mobile Number must be between 11 to 15 digits */
+    if (validator.isLength(mobileNumber, {min: 11, max: 15}) == false) {
+        result.isError = true;
+        result.message = "Mobile Number must be between 11 to 15 digits!";
+    }
+
     /* Mobile Number must be indonesia formatted */
     if (mobileNumber.substring(0, 3) != "+62") {
         result.isError = true;
@@ -133,6 +139,13 @@ module.exports.validateEmail = email => {
         isError: false,
         message: ""
     };
+    
+    /* Email format validation */
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(email) ==  false) {
+        result.isError = true;
+        result.message = "Invalid email format";
+    }
 
     /* Email required validation */
     if (validator.isEmpty(email)) {
@@ -142,3 +155,4 @@ module.exports.validateEmail = email => {
     
     return result;
 };
+

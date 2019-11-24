@@ -36,3 +36,27 @@ test("given indonesian format mobile number", () => {
     };
     expect(account.validateMobileNumber(mobileNumber)).toEqual(result);
 });
+
+/* Validate if mobile number range in between 11 to 15 */
+test("given 10 digits mobile number", () => {
+    let mobileNumber = "+628214349";
+
+    let result = {
+        name: "mobileNumber",
+        isError: true,
+        message: "Mobile Number must be between 11 to 15 digits!"
+    };
+    expect(account.validateMobileNumber(mobileNumber)).toEqual(result);
+});
+
+/* Validate if mobile number range in between 11 to 15 */
+test("given 16 digits mobile number", () => {
+    let mobileNumber = "+628214349262567";
+
+    let result = {
+        name: "mobileNumber",
+        isError: true,
+        message: "Mobile Number must be between 11 to 15 digits!"
+    };
+    expect(account.validateMobileNumber(mobileNumber)).toEqual(result);
+});

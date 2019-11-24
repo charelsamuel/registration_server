@@ -16,3 +16,11 @@ test("given valid first name", () => {
     let result = {name: "email", isError: false, message:""};
     expect(account.validateEmail(email)).toEqual(result);
 });
+
+/* Validate if email is invalid format */
+test("given valid first name", () => {
+    let email = "charelsamuel@gmail";
+
+    let result = {name: "email", isError: true, message:"Invalid email format"};
+    expect(account.validateEmail(email)).toEqual(result);
+});
