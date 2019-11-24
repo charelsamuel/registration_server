@@ -1,7 +1,5 @@
 const validator = require("validator");
 
-const Account = require('../models/account');
-
 /*
 Get the errors of account attributes
 @params: string firstName,
