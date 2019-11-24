@@ -16,3 +16,11 @@ test("given valid last name", () => {
     let result = {name: "lastName", isError: false, message:""};
     expect(account.validateLastName(lastName)).toEqual(result);
 });
+
+/* Validate if lastName contain number */
+test("given number contained", () => {
+    let lastName = "01Samuel";
+
+    let result = {name: "lastName", isError: true, message:"Last Name only contains letters!"};
+    expect(account.validateLastName(lastName)).toEqual(result);
+});

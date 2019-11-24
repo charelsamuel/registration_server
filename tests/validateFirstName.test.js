@@ -16,3 +16,11 @@ test("given valid first name", () => {
     let result = {name: "firstName", isError: false, message:""};
     expect(account.validateFirstName(firstName)).toEqual(result);
 });
+
+/* Validate if firstName contain number */
+test("given number contained", () => {
+    let firstName = "Charel01";
+
+    let result = {name: "firstName", isError: true, message:"First Name only contains letters!"};
+    expect(account.validateFirstName(firstName)).toEqual(result);
+});

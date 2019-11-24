@@ -65,6 +65,12 @@ module.exports.validateFirstName = firstName => {
         message: ""
     };
 
+    /* First Name only contains letter */
+    if (validator.isAlpha(firstName) == false) {
+        result.isError = true;
+        result.message = "First Name only contains letters!";
+    }
+
     /* First Name required validation */
     if (validator.isEmpty(firstName)) {
         result.isError = true;
@@ -85,6 +91,12 @@ module.exports.validateLastName = lastName => {
         isError: false,
         message: ""
     };
+
+    /* Last Name only contains letter */
+    if (validator.isAlpha(lastName) == false) {
+        result.isError = true;
+        result.message = "Last Name only contains letters!";
+    }
 
     /* Last Name required validation */
     if (validator.isEmpty(lastName)) {
@@ -155,4 +167,3 @@ module.exports.validateEmail = email => {
     
     return result;
 };
-
