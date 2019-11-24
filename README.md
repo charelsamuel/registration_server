@@ -28,3 +28,11 @@ To run unit test, open the terminal and type:
 To run the application, open the terminal and type:
 
     npm start
+
+# Available Service
+|Method| Address | Parameter 
+|--|--| -- |
+| POST | /api/v1/account/register  | mobileNumber, firstName, lastName, birthDay, birthMonth, birthYear, gender, email
+|GET| /api/v1/date/get-days |
+|GET| /api/v1/date/get-months
+|GET| /api/v1/date/get-years
