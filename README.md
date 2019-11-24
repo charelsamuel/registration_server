@@ -1,2 +1,30 @@
-# registration_server
-Restful Registration Server
+# Account Registration Web Service with Restful
+
+This is a Restful Application to handle account registration. Made with [NodeJS](https://nodejs.org/en/), [ExpressJS](https://expressjs.com/), [Sequelize ORM](https://sequelize.org/), and [Jest](https://jestjs.io/)
+
+# Installation
+To run installation, type `npm install` at the terminal
+
+# Setting Up Environment Variable
+Set the environment variable for the application by creating ***.env*** file under root directory
+
+    DB_USER=yourUser
+    DB_PASSWORD=yourPassword
+    DB_NAME=yourDatabaseName
+    DB_HOST=yourHost
+    DB_DIALECT=yourDialect (mysql/postgres/etc)
+
+# Migrations
+To run migrations, open the terminal and type:
+
+    npx sequelize-cli db:migrate
+
+# Test
+To run unit test, open the terminal and type:
+
+    npm test
+
+# Run Application
+To run the application, open the terminal and type:
+
+    npm start
